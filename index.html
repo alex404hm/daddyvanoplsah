@@ -1,104 +1,94 @@
 <!DOCTYPE html>
 <html lang="da">
 <head>
+    <!-- Basic Meta Tags -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Fanside dedikeret til Alex Vanopslagh, politiker og partileder for Liberal Alliance.">
-    <title>Alex Vanopslagh Fanside</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="robots" content="index, follow">
+    
+    <!-- SEO Meta Tags -->
+    <title>Alex Vanopslagh Fanside | Personlig Frihed, Politik & Liberal Alliance</title>
+    <meta name="description" content="Den officielle fanside dedikeret til Alex Vanopslagh, partileder for Liberal Alliance. Støt Liberal Alliance med en donation for at fremme personlig frihed.">
+    <meta name="keywords" content="Alex Vanopslagh, Liberal Alliance, donation, politik, dansk politik, personlig frihed, politiker, LAU, folketingsvalg, folketingsmedlem">
+    <meta name="author" content="Alex Vanopslagh Fanside">
+    
+    <!-- Open Graph Meta Tags (For social sharing) -->
+    <meta property="og:title" content="Alex Vanopslagh Fanside | Personlig Frihed, Politik & Liberal Alliance">
+    <meta property="og:description" content="Støt Liberal Alliance og Alex Vanopslagh i at fremme personlig frihed i Danmark. Din donation vil gøre en forskel.">
+    <meta property="og:image" content="https://www.daddyvanopslagh.com/images/alex-vanopslagh-social.jpg">
+    <meta property="og:url" content="https://www.daddyvanopslagh.com">
+    <meta property="og:type" content="website">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Alex Vanopslagh Fanside | Personlig Frihed & Liberal Alliance">
+    <meta name="twitter:description" content="Støt Liberal Alliance og Alex Vanopslagh i kampen for personlig frihed og vækst i Danmark.">
+    <meta name="twitter:image" content="https://www.daddyvanopslagh.com/images/alex-vanopslagh-social.jpg">
+    
+    <!-- Canonical Link -->
+    <link rel="canonical" href="https://www.daddyvanopslagh.com">
+
+    <!-- Favicon -->
+    <link rel="icon" href="https://www.daddyvanopslagh.com/favicon.ico" type="image/x-icon">
+
+    <!-- Preconnects for Performance Optimization -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- Fonts and External Resources -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- CSS Frameworks -->
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
-    <style>
-        .fade-in {
-            opacity: 0;
-            transform: translateY(20px);
-            transition: opacity 1s ease-out, transform 1s ease-out;
-        }
-        .fade-in-visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
-        .hero {
-            background-image: url('images/alex.png');
-            background-size: cover;
-            background-position: center;
-            height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            position: relative;
-            color: white;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
-        }
-        .overlay {
-            background: rgba(0, 0, 0, 0.5);
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-        }
-        #loading-screen {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: #ffffff;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            z-index: 9999;
-        }
-        #loading-screen .spinner {
-            border: 8px solid #f3f3f3;
-            border-top: 8px solid #3498db;
-            border-radius: 50%;
-            width: 80px;
-            height: 80px;
-            animation: spin 1s linear infinite;
-        }
-        @keyframes spin {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
-        }
-        html {
-            scroll-behavior: smooth;
-        }
-    </style>
+
+    <!-- Structured Data (JSON-LD for SEO) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "url": "https://www.daddyvanopslagh.com",
+      "logo": "https://www.daddyvanopslagh.com/images/alex-vanopslagh-logo.png",
+      "name": "Alex Vanopslagh Fanside",
+      "description": "Officiel fanside for Alex Vanopslagh, partileder for Liberal Alliance og forkæmper for personlig frihed.",
+      "sameAs": [
+        "https://www.facebook.com/AlexVanopslaghFanside",
+        "https://twitter.com/AlexFanside",
+        "https://www.instagram.com/AlexFanside/"
+      ]
+    }
+    </script>
+
+    <!-- SEO Best Practices for Search Engines -->
+    <meta name="google-site-verification" content="YOUR_GOOGLE_SITE_VERIFICATION_TOKEN" />
+    <meta name="bing-site-verification" content="YOUR_BING_SITE_VERIFICATION_TOKEN" />
+
+    <!-- Title for Search Engines and Users -->
+    <title>Alex Vanopslagh Fanside | Støt Liberal Alliance i at fremme personlig frihed</title>
 </head>
 <body class="bg-gray-100 text-gray-800">
 
-    <!-- Loading screen -->
-    <div id="loading-screen">
-        <div class="spinner" aria-label="Loading..."></div>
-    </div>
-
-    <!-- Navigation Bar -->
-    <section>
-      <nav class="font-inter mx-auto h-auto w-full max-w-screen-2xl lg:relative lg:top-0">
-        <div class="flex flex-col px-6 py-6 lg:flex-row lg:items-center lg:justify-between lg:px-10 lg:py-4 xl:px-20">
-          <a href="#">
-            <!-- Add your logo SVG or image here -->
-            <svg width="164" height="31" viewBox="0 0 164 31" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <!-- SVG Logo Code -->
-            </svg>
-          </a>
-          <div class="mt-14 flex flex-col space-y-8 lg:mt-0 lg:flex lg:flex-row lg:space-x-1 lg:space-y-0">
-            <a href="#about" class="flex flex-row rounded-lg lg:px-6 lg:py-4 text-gray-800 lg:hover:text-gray-800">Om Alex</a>
-            <a href="#blog" class="flex flex-row rounded-lg lg:px-6 lg:py-4 text-gray-800 lg:hover:text-gray-800">Blog</a>
-            <a href="#facts" class="flex flex-row rounded-lg lg:px-6 lg:py-4 text-gray-800 lg:hover:text-gray-800">Liberal Alliance Facts</a>
-          </div>
-          <div class="flex flex-col space-y-8 lg:flex lg:flex-row lg:space-x-3 lg:space-y-0">
-            <a href="#" class="font-inter rounded-lg lg:px-6 lg:py-4 lg:hover:text-gray-800">Sign Up</a>
-            <a class="font-inter rounded-lg bg-black px-8 py-4 text-center text-white hover:bg-gray-800" href="#">Login</a>
-          </div>
+    <!-- Fast navigation med effekter -->
+    <header class="sticky top-0 bg-white shadow-md z-50">
+        <div class="container mx-auto flex justify-between items-center py-4 px-6">
+            <div class="text-2xl font-bold">
+                <a href="#" class="text-blue-800">Alex Vanopslagh Fanside</a>
+            </div>
+            <nav>
+                <ul class="flex space-x-6">
+                    <li><a href="#about" class="text-gray-600 hover:text-blue-600">Om Alex</a></li>
+                    <li><a href="#news" class="text-gray-600 hover:text-blue-600">Nyheder</a></li>
+                    <li><a href="#contact" class="text-gray-600 hover:text-blue-600">Kontakt</a></li>
+                </ul>
+            </nav>
+            <div>
+                <a href="#" class="bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700 transition duration-300">Bliv medlem</a>
+            </div>
         </div>
-      </nav>
-    </section>
+    </header>
 
-    <!-- Hero Section -->
-    <section class="hero">
+    <!-- Hero sektion med PNG baggrund og fade-in effekter -->
+    <section class="hero relative">
         <div class="overlay"></div>
         <div class="content text-center fade-in">
             <h1 class="text-5xl md:text-6xl font-bold">Alex Vanopslagh</h1>
@@ -107,202 +97,45 @@
                 <a href="#about" class="bg-yellow-500 text-white py-2 px-6 rounded-full hover:bg-yellow-600 transition duration-300">Læs mere</a>
             </div>
         </div>
+        <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2">
+            <a href="#about" class="text-white text-xl animate-bounce">
+                <i class="fas fa-chevron-down"></i>
+            </a>
+        </div>
     </section>
 
-    <!-- Om Alex Section -->
+    <!-- Om Alex sektion med animationer -->
     <section id="about" class="container mx-auto mt-16 p-8">
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-            <!-- Image Section with Hover Effect -->
-            <div class="order-last md:order-none flex justify-center relative group">
-                <img src="images/alex-vanopslagh.jpg" alt="Alex Vanopslagh" class="rounded-lg shadow-lg max-w-full h-auto transform group-hover:scale-105 transition duration-500 ease-in-out">
-                <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-0 group-hover:opacity-100 transition duration-500 ease-in-out rounded-lg"></div>
-            </div>
-
-            <!-- Text Section -->
-            <div class="order-first md:order-none text-left fade-in">
-                <h2 class="text-3xl font-bold mb-6">Om Alex Vanopslagh</h2>
-                <p class="text-lg leading-relaxed mb-4">
-                    Alex Vanopslagh er folketingsmedlem og partileder for Liberal Alliance. Han er søn af Anni Sørensen og slagteren Samuel Vanopslagh, voksede op i Struer og er i dag far til Milton på 7 år. Alex har været en del af Liberal Alliance siden 2011, hvor han meldte sig ind i Liberal Alliances Ungdom (LAU). Han blev i 2014 formand for samme organisation, og på bare to år som formand for LAU formåede han at fordoble medlemstallet.
-                </p>
-                <p class="text-lg leading-relaxed mb-4">
-                    I 2016 blev Alex færdiguddannet som kandidat i statskundskab fra Københavns Universitet og vandt samme år DM i debat på Folkemødet. Han arbejdede sideløbende som public affairs-konsulent i GRACE PA og blev ved kommunalvalget i 2017 valgt til Borgerrepræsentationen i København.
-                </p>
-                <p class="text-lg leading-relaxed mb-4">
-                    Ved folketingsvalget i 2019 blev Alex valgt i Vestjyllands storkreds. Kort efter overtog han tidligere udenrigsminister Anders Samuelsens post som partileder for Liberal Alliance. Ved folketingsvalget i 2022 førte Alex partiet til sit hidtil bedste resultat – 7,9 % og 14 mandater.
-                </p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Blog Section -->
-    <section id="blog" class="container mx-auto py-16">
-        <div class="mx-auto w-full max-w-7xl px-5 md:px-10">
-            <div class="flex flex-col items-center">
-                <h2 class="text-center text-3xl font-bold md:text-5xl">The latest and greatest news</h2>
-                <p class="mb-8 mt-4 text-center text-sm text-gray-500 sm:text-base md:mb-12 lg:mb-16">
-                    Lorem ipsum dolor sit amet elit ut aliquam
-                </p>
-                <!-- Blog Content -->
-                <div class="mb-8 grid gap-5 sm:grid-cols-2 md:grid-cols-3 lg:gap-6">
-                    <!-- Blog Item -->
-                    <a href="#" class="flex flex-col gap-4 rounded-md px-4 py-8 md:p-0">
-                        <img src="https://firebasestorage.googleapis.com/v0/b/flowspark-1f3e0.appspot.com/o/Tailspark%20Images%2FPlaceholder%20Image.svg?alt=media&token=375a1ea3-a8b6-4d63-b975-aac8d0174074" alt="" class="h-60 object-cover" />
-                        <div class="flex flex-col items-start py-4">
-                            <div class="mb-4 rounded-md bg-gray-100 px-2 py-1.5">
-                                <p class="text-sm font-semibold text-blue-600">CATEGORY NAME</p>
-                            </div>
-                            <p class="mb-4 text-xl font-bold md:text-2xl">The latest news with Flowspark</p>
-                            <div class="flex flex-col items-start text-sm text-gray-500 lg:flex-row lg:items-center">
-                                <p>Laila Bahar</p>
-                                <p class="mx-2 hidden lg:block">-</p>
-                                <p>6 mins read</p>
-                            </div>
-                        </div>
-                    </a>
-                    <!-- Blog Item -->
-                    <a href="#" class="flex flex-col gap-4 rounded-md px-4 py-8 md:p-0">
-                        <img src="https://firebasestorage.googleapis.com/v0/b/flowspark-1f3e0.appspot.com/o/Tailspark%20Images%2FPlaceholder%20Image.svg?alt=media&token=375a1ea3-a8b6-4d63-b975-aac8d0174074" alt="" class="h-60 object-cover" />
-                        <div class="flex flex-col items-start py-4">
-                            <div class="mb-4 rounded-md bg-gray-100 px-2 py-1.5">
-                                <p class="text-sm font-semibold text-blue-600">CATEGORY NAME</p>
-                            </div>
-                            <p class="mb-4 text-xl font-bold md:text-2xl">The latest news with Flowspark</p>
-                            <div class="flex flex-col items-start text-sm text-gray-500 lg:flex-row lg:items-center">
-                                <p>Laila Bahar</p>
-                                <p class="mx-2 hidden lg:block">-</p>
-                                <p>6 mins read</p>
-                            </div>
-                        </div>
-                    </a>
-                    <!-- Blog Item -->
-                    <a href="#" class="flex flex-col gap-4 rounded-md px-4 py-8 md:p-0">
-                        <img src="https://firebasestorage.googleapis.com/v0/b/flowspark-1f3e0.appspot.com/o/Tailspark%20Images%2FPlaceholder%20Image.svg?alt=media&token=375a1ea3-a8b6-4d63-b975-aac8d0174074" alt="" class="h-60 object-cover" />
-                        <div class="flex flex-col items-start py-4">
-                            <div class="mb-4 rounded-md bg-gray-100 px-2 py-1.5">
-                                <p class="text-sm font-semibold text-blue-600">CATEGORY NAME</p>
-                            </div>
-                            <p class="mb-4 text-xl font-bold md:text-2xl">The latest news with Flowspark</p>
-                            <div class="flex flex-col items-start text-sm text-gray-500 lg:flex-row lg:items-center">
-                                <p>Laila Bahar</p>
-                                <p class="mx-2 hidden lg:block">-</p>
-                                <p>6 mins read</p>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <!-- View More Button -->
-                <a href="#" class="rounded-md bg-black px-6 py-3 text-center font-semibold text-white">View More</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Facts Section -->
-    <section id="facts" class="container mx-auto py-16">
-        <div class="flex flex-col items-center">
-            <h2 class="text-center text-3xl font-bold md:text-5xl">Liberal Alliance Facts</h2>
-            <p class="mb-8 mt-4 text-center text-sm text-gray-500 sm:text-base md:mb-12 lg:mb-16">
-                Interessante fakta om Liberal Alliance og dets politik
+        <div class="fade-in text-center">
+            <h2 class="text-3xl font-bold mb-6">Om Alex Vanopslagh</h2>
+            <p class="text-lg leading-relaxed mb-12">
+                Alex Vanopslagh er en fremtrædende dansk politiker og partileder for Liberal Alliance. Med stærke liberale værdier og fokus på personlig frihed har Alex ført sin politiske karriere til nye højder.
             </p>
-            <!-- Facts Content -->
-            <div class="grid gap-8 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 lg:gap-10">
-                <!-- Fact Item -->
-                <div class="flex flex-col items-center text-center p-6 rounded-lg shadow-lg bg-white">
-                    <span class="text-4xl font-bold text-blue-600">7.9%</span>
-                    <p class="mt-2 text-gray-600">Stemmeandel ved folketingsvalget i 2022</p>
-                </div>
-                <!-- Fact Item -->
-                <div class="flex flex-col items-center text-center p-6 rounded-lg shadow-lg bg-white">
-                    <span class="text-4xl font-bold text-blue-600">14</span>
-                    <p class="mt-2 text-gray-600">Mandater i folketinget</p>
-                </div>
-                <!-- Fact Item -->
-                <div class="flex flex-col items-center text-center p-6 rounded-lg shadow-lg bg-white">
-                    <span class="text-4xl font-bold text-blue-600">2011</span>
-                    <p class="mt-2 text-gray-600">År hvor Alex blev medlem af LAU</p>
-                </div>
-                <!-- Fact Item -->
-                <div class="flex flex-col items-center text-center p-6 rounded-lg shadow-lg bg-white">
-                    <span class="text-4xl font-bold text-blue-600">2014</span>
-                    <p class="mt-2 text-gray-600">År hvor Alex blev formand for LAU</p>
-                </div>
-            </div>
         </div>
     </section>
 
-    <!-- Footer Section -->
-    <footer class="bg-gray-900 text-white py-16">
-        <div class="container mx-auto px-6">
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-12">
-                <div>
-                    <h4 class="text-xl font-bold mb-6">Alex Vanopslagh Fanside</h4>
-                    <p class="text-gray-400">Din kilde til nyheder og information om Alex Vanopslagh.</p>
-                    <div class="mb-8 mt-6 flex flex-row">
-                        <a href="#" aria-label="Facebook" class="mr-4 text-white transition hover:text-gray-400">
-                            <i class="fab fa-facebook-f"></i>
-                        </a>
-                        <a href="#" aria-label="Instagram" class="mx-4 text-white transition hover:text-gray-400">
-                            <i class="fab fa-instagram"></i>
-                        </a>
-                        <a href="#" aria-label="Twitter" class="mx-4 text-white transition hover:text-gray-400">
-                            <i class="fab fa-twitter"></i>
-                        </a>
-                        <a href="#" aria-label="LinkedIn" class="mx-4 text-white transition hover:text-gray-400">
-                            <i class="fab fa-linkedin-in"></i>
-                        </a>
+    <!-- Nyhedssektion med nyeste indhold -->
+    <section id="news" class="bg-gray-200 py-16">
+        <!-- Container -->
+        <div class="mx-auto w-full max-w-7xl px-5 py-16 md:px-10 md:py-20">
+            <!-- Title -->
+            <h2 class="text-center text-3xl font-bold md:text-5xl lg:text-left">The latest and greatest news</h2>
+            <p class="mb-8 mt-4 text-center text-sm text-gray-500 sm:text-base md:mb-12 lg:mb-16 lg:text-left">Lorem ipsum dolor sit amet elit ut aliquam</p>
+            <!-- Content -->
+            <div class="mx-auto grid gap-8 lg:grid-cols-2">
+                <a href="#" class="flex flex-col gap-4 rounded-md [grid-area:1/1/4/2] lg:pr-8">
+                    <img src="https://firebasestorage.googleapis.com/v0/b/flowspark-1f3e0.appspot.com/o/Tailspark%20Images%2FPlaceholder%20Image.svg?alt=media&token=375a1ea3-a8b6-4d63-b975-aac8d0174074" alt="" class="inline-block h-72 w-full object-cover" />
+                    <div class="flex flex-col items-start py-4">
+                        <div class="mb-4 rounded-md bg-gray-100 px-2 py-1.5">
+                            <p class="text-sm font-semibold text-blue-600">CATEGORY NAME</p>
+                        </div>
+                        <p class="mb-4 text-xl font-bold md:text-2xl">The latest news with Flowspark</p>
+                        <div class="flex flex-col text-sm text-gray-500 lg:flex-row">
+                            <p>Laila Bahar</p>
+                            <p class="mx-2 hidden lg:block">-</p>
+                            <p>6 mins read</p>
+                        </div>
                     </div>
-                </div>
-                <div>
-                    <h4 class="text-xl font-bold mb-6">Hurtige Links</h4>
-                    <ul class="space-y-3 text-gray-400">
-                        <li><a href="#about" class="hover:text-white transition-all">Om Alex</a></li>
-                        <li><a href="#contact" class="hover:text-white transition-all">Kontakt</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h4 class="text-xl font-bold mb-6">Kontakt Os</h4>
-                    <ul class="space-y-3 text-gray-400">
-                        <li><i class="fas fa-phone mr-2"></i> +45 1234 5678</li>
-                        <li><i class="fas fa-envelope mr-2"></i> info@alexfanside.dk</li>
-                        <li><i class="fas fa-map-marker-alt mr-2"></i> 123 Gade, By, Land</li>
-                    </ul>
-                </div>
-                <div>
-                    <h4 class="text-xl font-bold mb-6">Nyhedsbrev</h4>
-                    <p class="text-gray-400 mb-4">Tilmeld dig vores nyhedsbrev for at få de seneste opdateringer.</p>
-                    <div class="flex space-x-2">
-                        <input type="email" placeholder="Din email" class="flex-1 px-4 py-2 rounded-lg bg-gray-800 border border-gray-700 focus:outline-none focus:border-indigo-500">
-                        <button class="bg-gradient-to-r from-indigo-500 to-pink-500 text-white px-4 py-2 rounded-lg hover:opacity-90 transition-all">
-                            Tilmeld
-                        </button>
-                    </div>
-                </div>
-            </div>
-            <div class="mx-auto my-12 w-full border border-gray-300 lg:my-20"></div>
-            <div>
-                <p class="text-center text-sm text-gray-500 lg:mt-0">© Copyright 2021. All rights reserved.</p>
-            </div>
-        </div>
-    </footer>
-
-    <script defer>
-        const fadeInElements = document.querySelectorAll('.fade-in');
-
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('fade-in-visible');
-                }
-            });
-        });
-
-        fadeInElements.forEach(element => {
-            observer.observe(element);
-        });
-
-        window.addEventListener("load", function() {
-            const loadingScreen = document.getElementById("loading-screen");
-            loadingScreen.style.display = "none";
-        });
-    </script>
-</body>
-</html>
+                </a>
+                <div class="md:flex md:justify-between lg:flex-col">
+                    <a href="#" class="flex flex-col pb-5 lg:mb-3 lg:flex-row lg:border-b lg:border
