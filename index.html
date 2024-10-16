@@ -42,29 +42,52 @@
     <!-- CSS Frameworks -->
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 
-    <!-- Structured Data (JSON-LD for SEO) -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Organization",
-      "url": "https://www.daddyvanopslagh.com",
-      "logo": "https://www.daddyvanopslagh.com/images/alex-vanopslagh-logo.png",
-      "name": "Alex Vanopslagh Fanside",
-      "description": "Officiel fanside for Alex Vanopslagh, partileder for Liberal Alliance og forkæmper for personlig frihed.",
-      "sameAs": [
-        "https://www.facebook.com/AlexVanopslaghFanside",
-        "https://twitter.com/AlexFanside",
-        "https://www.instagram.com/AlexFanside/"
-      ]
-    }
-    </script>
+    <!-- Custom CSS -->
+    <style>
+        /* Fade-in Animation */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 1s ease-out, transform 1s ease-out;
+        }
+        .fade-in-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
 
-    <!-- SEO Best Practices for Search Engines -->
-    <meta name="google-site-verification" content="YOUR_GOOGLE_SITE_VERIFICATION_TOKEN" />
-    <meta name="bing-site-verification" content="YOUR_BING_SITE_VERIFICATION_TOKEN" />
+        /* Hero Section */
+        .hero {
+            background-image: url('https://dontt.dk/wp-content/uploads/2020/06/alex-vanopslagh-ny-dontt-scaled-uai-2064x1376.jpg');
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+        }
 
-    <!-- Title for Search Engines and Users -->
-    <title>Alex Vanopslagh Fanside | Støt Liberal Alliance i at fremme personlig frihed</title>
+        .overlay {
+            background: rgba(0, 0, 0, 0.6);
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        /* Smooth scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        .content {
+            position: relative;
+            z-index: 10;
+        }
+    </style>
 </head>
 <body class="bg-gray-100 text-gray-800">
 
@@ -87,7 +110,7 @@
         </div>
     </header>
 
-    <!-- Hero sektion med PNG baggrund og fade-in effekter -->
+    <!-- Hero Section with Background Image -->
     <section class="hero relative">
         <div class="overlay"></div>
         <div class="content text-center fade-in">
@@ -104,7 +127,7 @@
         </div>
     </section>
 
-    <!-- Om Alex sektion med animationer -->
+    <!-- Om Alex Sektion -->
     <section id="about" class="container mx-auto mt-16 p-8">
         <div class="fade-in text-center">
             <h2 class="text-3xl font-bold mb-6">Om Alex Vanopslagh</h2>
@@ -114,16 +137,13 @@
         </div>
     </section>
 
-    <!-- Nyhedssektion med nyeste indhold -->
+    <!-- Nyhedssektion -->
     <section id="news" class="bg-gray-200 py-16">
-        <!-- Container -->
         <div class="mx-auto w-full max-w-7xl px-5 py-16 md:px-10 md:py-20">
-            <!-- Title -->
             <h2 class="text-center text-3xl font-bold md:text-5xl lg:text-left">The latest and greatest news</h2>
             <p class="mb-8 mt-4 text-center text-sm text-gray-500 sm:text-base md:mb-12 lg:mb-16 lg:text-left">Lorem ipsum dolor sit amet elit ut aliquam</p>
-            <!-- Content -->
             <div class="mx-auto grid gap-8 lg:grid-cols-2">
-                <a href="#" class="flex flex-col gap-4 rounded-md [grid-area:1/1/4/2] lg:pr-8">
+                <a href="#" class="flex flex-col gap-4 rounded-md lg:pr-8">
                     <img src="https://firebasestorage.googleapis.com/v0/b/flowspark-1f3e0.appspot.com/o/Tailspark%20Images%2FPlaceholder%20Image.svg?alt=media&token=375a1ea3-a8b6-4d63-b975-aac8d0174074" alt="" class="inline-block h-72 w-full object-cover" />
                     <div class="flex flex-col items-start py-4">
                         <div class="mb-4 rounded-md bg-gray-100 px-2 py-1.5">
@@ -137,5 +157,87 @@
                         </div>
                     </div>
                 </a>
-                <div class="md:flex md:justify-between lg:flex-col">
-                    <a href="#" class="flex flex-col pb-5 lg:mb-3 lg:flex-row lg:border-b lg:border
+            </div>
+        </div>
+    </section>
+
+    <!-- Join the Community Section -->
+    <section>
+        <div class="mx-auto w-full max-w-7xl px-5 py-16 md:px-10 md:py-20">
+            <div class="bg-gray-100 p-8 text-center sm:p-10 md:p-16">
+                <h2 class="mb-4 text-3xl font-bold md:text-5xl"> Join the Flowspark Community </h2>
+                <p class="mx-auto mb-6 max-w-2xl text-sm text-gray-500 sm:text-base md:mb-10 lg:mb-12"> Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus venenatis, lectus magna fringilla urna </p>
+                <div class="mx-auto mb-4 flex max-w-lg justify-center">
+                    <form name="email-form" method="get" class="flex w-full flex-col gap-3 sm:flex-row">
+                        <input type="email" class="h-9 w-full rounded-md border border-solid border-black px-3 py-6 text-sm text-gray-500" placeholder="Enter your email" />
+                        <input type="submit" value="Notify me" class="cursor-pointer rounded-md bg-black px-6 py-2 font-semibold text-white" />
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="bg-gray-900 text-white py-16">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12">
+                <div>
+                    <h4 class="text-xl font-bold mb-6">Alex Vanopslagh Fanside</h4>
+                    <p class="text-gray-400">Din kilde til nyheder og information om Alex Vanopslagh.</p>
+                </div>
+                <div>
+                    <h4 class="text-xl font-bold mb-6">Hurtige Links</h4>
+                    <ul class="space-y-3 text-gray-400">
+                        <li><a href="#about" class="hover:text-white transition-all">Om Alex</a></li>
+                        <li><a href="#news" class="hover:text-white transition-all">Nyheder</a></li>
+                        <li><a href="#contact" class="hover:text-white transition-all">Kontakt</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-xl font-bold mb-6">Kontakt Os</h4>
+                    <ul class="space-y-3 text-gray-400">
+                        <li><i class="fas fa-phone mr-2"></i> +45 1234 5678</li>
+                        <li><i class="fas fa-envelope mr-2"></i> info@alexfanside.dk</li>
+                        <li><i class="fas fa-map-marker-alt mr-2"></i> 123 Gade, By, Land</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-xl font-bold mb-6">Nyhedsbrev</h4>
+                    <p class="text-gray-400 mb-4">Tilmeld dig vores nyhedsbrev for at få de seneste opdateringer.</p>
+                    <div class="flex space-x-2">
+                        <input type="email" placeholder="Din email" class="flex-1 px-4 py-2 rounded-lg bg-gray-800 border border-gray-700 focus:outline-none focus:border-indigo-500">
+                        <button class="bg-gradient-to-r from-indigo-500 to-pink-500 text-white px-4 py-2 rounded-lg hover:opacity-90 transition-all">
+                            Tilmeld
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="mx-auto my-12 w-full border border-gray-300 lg:my-20"></div>
+            <div>
+                <p class="text-center text-sm text-gray-500 lg:mt-0">© Copyright 2024. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script defer>
+        const fadeInElements = document.querySelectorAll('.fade-in');
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('fade-in-visible');
+                }
+            });
+        });
+        fadeInElements.forEach(element => {
+            observer.observe(element);
+        });
+
+        window.addEventListener("load", function() {
+            const loadingScreen = document.getElementById("loading-screen");
+            if (loadingScreen) {
+                loadingScreen.style.display = "none";
+            }
+        });
+    </script>
+</body>
+</html>
